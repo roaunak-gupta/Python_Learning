@@ -1,9 +1,11 @@
 class Account:
 
-    def __init__(self, balance, account):
+    def __init__(self, balance, account, password):
 
         self.balance = balance
-        self.account = account
+        self.account = account  # Public Attritube
+        self.__password = password  # Private Attribute
+        self.__check_password()  # Private Method can be access by the only thier Class
 
     def credit(self, credit_balance):
 
@@ -17,12 +19,14 @@ class Account:
         print(
             f"Rs. {debit_balance} was debited from account no. {self.account}\n")
 
-    def print_balance(self):
-
+    def print_balance(self):  # Public Methods
         print(f"Your Account Balance : {self.balance}\n")
 
+    def __check_password(self):  # Private Methods
+        print(f"Your Password is : {self.__password}")
 
-acc1 = Account(34000, 50526665706)
+
+acc1 = Account(34000, 50526665706, "abc123$")
 
 while True:
     print("Enter your Mode (CR = Credit & DR = Debit & PR = Print your Balance)")
