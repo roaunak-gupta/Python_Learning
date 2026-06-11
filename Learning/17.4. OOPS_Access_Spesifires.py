@@ -23,6 +23,7 @@ class Account:
         print(f"Your Account Balance : {self.balance}\n")
 
     def __check_password(self):  # Private Methods
+        
         print(f"Your Password is : {self.__password}")
 
 
