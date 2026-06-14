@@ -1,6 +1,6 @@
 # There are 4 Types of Operators
 
-a = 2
+a = 5
 b = 3
 
 # 1. Arithmatic Operator
@@ -9,6 +9,7 @@ print(a+b)  #Addition
 print(a-b)  #Substract
 print(a*b)  #Multipilation
 print(a/b)  #Divide
+print(a//b) #Divide without floating 
 print(a%b)  #Remender
 print(a**b) #Exponetation
 

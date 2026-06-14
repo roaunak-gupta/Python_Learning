@@ -7,7 +7,7 @@
 # Insert in Middle	        O(n)
 # Delete	                O(n)
 
-list1 = ["Roaunak", "Aashika", "Uday", "Meenu", "Sumit", "Manish","Roaunak"]
+list1 = ["Roaunak", "Aashika", "Uday", "Meenu", "Sumit", "Manish", "Roaunak"]
 print(list1[2])
 print(list1[-2])  # Negative index used to find the backword indexing.
 
@@ -46,11 +46,11 @@ else:
 
 # Sort the list
 list1.sort()
-print("Shorted List : " ,list1)
+print("Shorted List : ", list1)
 
 # Reverse the list
 list1.reverse()
-print("Reversed List : " ,list1)
+print("Reversed List : ", list1)
 
 # Count the Occurrences of the value
 print(list1.count("Roaunak"))
