@@ -1,3 +1,10 @@
+
+#! Polymorphism comes from two Greek words:
+
+# Poly = Many & Morph = Forms
+
+# So, Polymorphism means "one thing, many forms."
+
 class Complex:
     def __init__(self, real, img):
         self.real = real
@@ -28,5 +35,5 @@ num3 = num1.add(num2)
 num3.showNumber()
 
 # Operator Overloading
-num4 = num1 + num2 # Here we directly add two complex numbers using with dunder funtions
+num4 = num1 + num2  # Here we directly add two complex numbers using with dunder funtions
 num4.showNumber()
