@@ -21,3 +21,4 @@ print(student1.persentage)
 
 student1.phy = 45
 print(student1.calcPersentage_property) # The propertiy Decorator is automaticaly calculate the current data.
+    

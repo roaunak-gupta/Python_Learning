@@ -36,7 +36,7 @@ class Student:
 studnet = Student()
 studnet.changeName("Roaunak Gupta")
 print(f"Student : {studnet.name}")
-studnet.changeName(f"Student name change by changeName method : {Student.name}")
+studnet.changeName(
+    f"Student name change by changeName method : {Student.name}")
 studnet.changeName1("Uday Gupta")
-print((f"Studnet name change by changeName1 Method : {Student.name }"));
-
+print((f"Studnet name change by changeName1 Method : {Student.name}"))
