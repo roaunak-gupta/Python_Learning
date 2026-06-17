@@ -8,15 +8,13 @@ names = ["Roaunak", "Aashika", "Billu", "Meenu",
 names_A = []
 
 
-def finder(names, names_A):
-    i = 0
-    while i < len(names):
-        if names[i].startswith("A"):
-            print(names[i])
-            names_A.append(names[i])
-            names.remove(names[i])
-            continue
-        i = i + 1
+def finder(name, names_A):
+    for name in names:
+        if name.startswith("A"):
+            names_A.append(name)
+
+    for name_A in names_A:
+        names.remove(name_A)
 
 
 finder(names, names_A)
