@@ -1,10 +1,5 @@
-le current:
-        #     if current.data == int(location):
-        #         temp = current
-        #         new_node.next = current.next
-        #         new_node.previous = current
-        #         temp = current.next
-        #         temp.previous = new_node
-        #         current.next = new_node
-        #         break
-        #     
+ print(current.previous,current.previous.data)
+                        print(current,current.data)
+                        print(current.next,current.next.data)
+                        print(current.next.previous,current.next.previous.data)
+                        print(current.previous.next,current.previous.next.data)

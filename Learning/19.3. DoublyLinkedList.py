@@ -42,7 +42,7 @@ class DoublyLinkedList:
 
         current.next = new_node
         new_node.previous = current
-        self.teal = current
+        self.teal = new_node
 
     def insert_on_head(self, data):
         new_node = Node(data)
@@ -63,19 +63,41 @@ class DoublyLinkedList:
             self.head = new_node
             print(f"First Node Created with the data : {new_node.data}")
             return
-        
+
         current = self.head
-        
-        # while current:
-        #     if current.data == int(location):
-        #         temp = current
-        #         new_node.next = current.next
-        #         new_node.previous = current
-        #         temp = current.next
-        #         temp.previous = new_node
-        #         current.next = new_node
-        #         break
-        #     current = current.next
+
+        while current:
+            if current.data == int(location):
+                new_node.next = current.next
+                new_node.previous = current
+                if current.next:
+                    print(current.next.previous.data)
+                    current.next.previous = new_node
+                else:
+                    self.teal = new_node
+                current.next = new_node
+                return
+            current = current.next
+
+    def delete_node(self, location):
+        current = self.head
+        while current:
+            if current.data == int(location):
+                if current == self.head:
+                    self.head = current.next
+                    if current.next:
+                        current.next.previous = None
+                        print(current.data,": Head Deleted.")
+                else:
+                    if current == self.teal:
+                        current.previous.next = None
+                        self.teal = current.previous
+                        print(current.data,": Teal Deleted.")
+                    else:
+                        current.previous.next = current.next
+                        current.next.previous = current.previous
+                        print(current.data,": MID Deleted.")
+            current = current.next
 
 
 dll = DoublyLinkedList()
@@ -89,7 +111,11 @@ dll.insert_on_teal(14)
 dll.insert_on_head(1)
 dll.insert_on_teal(16)
 dll.insert_on_teal(18)
-# dll.insert_on_mid(17,18)
+dll.insert_on_mid(15, 14)
 dll.insert_on_teal(20)
+dll.insert_on_teal(22)
+dll.display_forword()
+dll.display_backword()
+dll.delete_node(12)
 dll.display_forword()
 dll.display_backword()
